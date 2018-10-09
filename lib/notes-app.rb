@@ -15,4 +15,13 @@ class Notes
 		  item_number += 1
 		}
 	end
+	
+	def open(listitem)
+		listitem -= 1
+		@notes.each {|item|
+		  if @notes.index(item) == listitem
+		  	puts "#{item[:title]}\n\n#{item[:body]}"
+		  end
+		}
+	end
 end
