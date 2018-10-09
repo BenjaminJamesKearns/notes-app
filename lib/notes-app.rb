@@ -1,8 +1,10 @@
 class Notes
 	attr_reader :notes
+	
 	def initialize 
 		@notes = []
 	end
+	
 	def new(title, body)
 		@notes << {title: title, body: body}
 		"#{title} note added"
