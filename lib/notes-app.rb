@@ -22,7 +22,7 @@ class Notes
 		listitem -= 1
 		@notes.each {|item|
 		  if @notes.index(item) == listitem
-		  	puts "#{item[:title]}\n\n#{item[:body]}"
+		    puts "#{item[:title]}\n\n#{item[:body]}"
 		  end
 		}
 	end
