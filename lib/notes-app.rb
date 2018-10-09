@@ -5,7 +5,7 @@ class Notes
 		@notes = []
 	end
 	
-	def new(title, body)
+	def add(title, body)
 		@notes << {title: title, body: body}
 		"#{title} note added"
 	end
@@ -20,8 +20,8 @@ class Notes
 	
 	def open(listitem)
 		listitem -= 1
-		@notes.each {|item|
-		  if @notes.index(item) == listitem
+		@notes.each_with_index {|item, index|
+		  if index == listitem
 		    puts "#{item[:title]}\n\n#{item[:body]}"
 		  end
 		}
